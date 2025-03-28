@@ -6,7 +6,6 @@ const state = {
 
 /** Moves a sheep from start to target */
 function moveSheep() {
-  // TODO
   state.target.push(state.start[0]);
   state.start.pop();
 }
@@ -22,7 +21,6 @@ function renderStartSheep() {
     button.textContent = "🐑";
     li.append(button);
 
-    // TODO: Add event listener so the sheep moves when clicked
     button.addEventListener("click", (event) => {
       moveSheep();
       render();
@@ -36,7 +34,6 @@ function renderStartSheep() {
 
 /** Renders sheep on the target bank */
 function renderTargetSheep() {
-  // TODO
    const targetSheep = state.target.map((sheep) => {
      const li = document.createElement("li");
 
@@ -59,7 +56,6 @@ function render() {
 // Initial render
 render();
 
-// TODO: Add sheep to the starting bank when the form is submitted
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
